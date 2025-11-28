@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import { inter } from "../public/fonts/fonts";
 
 export const metadata: Metadata = {
-  title: "ْQuestions & Answers",
+  title: "Questions & Answers",
   description: "questions and answers by people...",
 };
 
