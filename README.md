@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Questionnaire Application
 
-## Getting Started
+A modern, fully-typed React + TypeScript questionnaire application built with Vite. This application collects structured feedback from users across 15 questions to help improve organizational insights and job-related data.
 
-First, run the development server:
+Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Multi-stage Form: Name entry → Questions → Success confirmation
+15 Comprehensive Questions: Mix of different input types for varied data collection
+Full TypeScript Support: Strongly-typed components and interfaces for better development experience
+Progress Tracking: Visual progress bar showing completion status
+Input Validation: Ensures all questions are answered before submission
+Navigation: Previous/Next buttons to move through questions easily
+Responsive Design: Beautiful UI with Tailwind CSS that works on all devices
+Supabase Ready: Pre-configured for easy integration with Supabase backend
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next Js: V 16.0.5
+TypeScript: Static typing for JavaScript
+Tailwind CSS: Utility-first CSS framework
+Lucide React: Icon library
+Supabase: Backend database
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+qa-nextjs-supabase/
+├── app/
+│ ├── admin/
+│ │ └── ....
+│ ├── success/
+│ │ └── ....
+│ ├── survey/
+│ │ └── ....
+│ ├── icon.png
+│ ├── layout.tsx
+│ ├── page.tsx
+├── src
+│ ├── components # Reusable UI
+│ │ ├── ui/ # daisy ui components (Button, etc.)
+│ │ │ └── ...
+│ │ ├── shared/ # Global like SideMenu, BottomNav
+│ │ │ └── ....
+│ ├── hooks
+│ │ └── .....
+│ ├── services
+│ │ └── .....
+│ ├── store # Zustand store
+│ │ └── .....
+│ ├── styles
+│ │ └── .....
+│ ├── types/
+│ └── .....
+├── vite.config.ts # Vite configuration
+├── tsconfig.json # TypeScript configuration
+├── tailwind.config.js # Tailwind CSS configuration
+├── package.json # Dependencies
+└── README.md # This file
