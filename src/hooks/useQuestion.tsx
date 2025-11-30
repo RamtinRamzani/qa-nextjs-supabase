@@ -43,7 +43,7 @@ export const useQuestions = () => {
               opts = JSON.parse(t.options);
               if (
                 !Array.isArray(opts) ||
-                !opts.every((item: any) => typeof item === "string")
+                !opts.every((item: unknown) => typeof item === "string")
               ) {
                 console.warn(
                   `options نامعتبر برای سوال ${t.id} – نادیده گرفته شد`
@@ -79,7 +79,7 @@ export const useQuestions = () => {
           return {
             id: t.id,
             question: questionText || `سوال ${t.id} (متن موجود نیست)`,
-            type: t.type as any, // Adjust to QuestionType if imported
+            type: t.type as Question["type"], // Adjust to QuestionType if imported
             options: opts,
           };
         });

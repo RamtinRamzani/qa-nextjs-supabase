@@ -83,8 +83,11 @@ export const useSurveyLogic = ({ questions, name }: UseSurveyLogicProps) => {
 
       console.log("پاسخ‌ها ارسال شد");
       return true; // موفقیت
-    } catch (err: any) {
-      const errorMsg = err.message || "خطای ناشناخته";
+    } catch (err: unknown) {
+      let errorMsg = "خطای ناشناخته";
+      if (err instanceof Error) {
+        errorMsg = err.message;
+      }
       setError(`خطا در ارسال پاسخ‌ها: ${errorMsg}`);
       console.error("جزئیات خطا:", err);
       return false;
